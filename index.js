@@ -9,16 +9,18 @@ form.addEventListener('submit', function(e) {
     let vinte = Math.trunc(((valorInput % 100) % 50) / 20);
     let dez = Math.trunc((((valorInput % 100) % 50) % 20) / 10);
     let cinco = Math.trunc(((((valorInput % 100) % 50) % 20) % 10) / 5);
-    let um = Math.trunc(((((valorInput % 100) % 50) % 20) % 10) % 5) / 1;
+    let dois = Math.trunc((((((valorInput % 100) % 50) % 20) % 10) % 5)/ 2);
+    let um = Math.trunc((((((valorInput % 100) % 50) % 20) % 10) % 5) % 2) / 1;
 
     resultado.innerHTML= 
-    ` foram usadas: <br>
-    ${cem} notas de 100R$ <br> 
-    ${cinquenta} notas de 50R$ <br>
-    ${vinte} notas de 20R$ <br>
-    ${dez} notas de 10R$ <br>
-    ${cinco} notas de 5R$ <br>
-    ${um} notas de 1R$`
+    `
+    <p>${cem} notas de 100R$</p>
+    <p>${cinquenta} notas de 50R$</p> 
+    <p>${vinte} notas de 20R$ </p>
+    <p>${dez} notas de 10R$ </p>
+    <p>${cinco} notas de 5R$</p> 
+    <p>${dois} notas de 2R$ </p>
+    <p>${um} notas de 1R$</p> `
    
     e.preventDefault();
 });
